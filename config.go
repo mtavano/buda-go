@@ -5,10 +5,11 @@ const (
 	bitsLen64 = 64
 
 	// Market Pairs
-	pairBTCCLP = "btc-clp"
-	pairETHCLP = "eth-clp"
+	PairBTCCLP = "btc-clp"
+	PairETHCLP = "eth-clp"
 
 	// endpoints
+	marketTrades           = "/markets/%s/trades"
 	marketTickerEndpoint   = "/markets/%s/ticker"
 	accountBalanceEndpoint = "/balances"
 	ordersByMarektEndpoint = "/markets/%s/orders"

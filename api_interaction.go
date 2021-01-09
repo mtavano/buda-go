@@ -40,6 +40,7 @@ func (b *Buda) scanBody(res *http.Response, scanner interface{}) error {
 	if err != nil {
 		return err
 	}
+	fmt.Println(string(body))
 
 	return json.Unmarshal(body, scanner)
 }
