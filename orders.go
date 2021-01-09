@@ -5,7 +5,6 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/mtavano/exchange"
 	"github.com/pkg/errors"
 )
 
@@ -19,6 +18,14 @@ const (
 	statusCanceled  = "canceled" // Canceled
 )
 
+const (
+	OrderTypeBuy         = "Bid"
+	OrderTypeSell        = "Ask"
+	OrderPriceTypeLimit  = "limit"
+	OrderPriceTypeMarket = "market"
+)
+
+// Order is a buda order
 type Order struct {
 	ID             uint64    `json:"id,omitempty"`
 	Type           string    `json:"type,omitempty"`
@@ -36,18 +43,17 @@ type Order struct {
 	PaidFee        []string  `json:"paid_fee,omitempty"`
 }
 
-type postOrder struct {
+// CreateOrderRequest is the request to create an order
+type CreateOrderRequest struct {
 	Type      string  `json:"type,omitempty"`
-	PriceType string  `json:"price_type,omitempty"`
+	PriceType string  `json:"price_type,omitempty"` // limit
 	Limit     float64 `json:"limit"`
 	Amount    float64 `json:"amount,omitempty"`
 }
 
-func (b *Buda) CreateOrder(order *Order) (*Order, error) {
-	var po postOrder
-	pair := genericPairToBuda[order.Pair]
-
-	body, err := b.MarshallBody(&po)
+// CreateOrder ...
+func (b *Buda) CreateOrder(pair string, po *CreateOrderRequest) (*Order, error) {
+	body, err := b.MarshallBody(po)
 	if err != nil {
 		return nil, err
 	}
@@ -70,6 +76,7 @@ func (b *Buda) CreateOrder(order *Order) (*Order, error) {
 	return payload.Order, nil
 }
 
+// GetOrder ...
 func (b *Buda) GetOrder(id string) (*Order, error) {
 	url := fmt.Sprintf(ordersByID, id)
 	res, err := b.makeRequest(http.MethodGet, url, nil, true)
@@ -88,7 +95,8 @@ func (b *Buda) GetOrder(id string) (*Order, error) {
 	return payload.Order, nil
 }
 
-func (b *Buda) CancelOrder(id string) (*exchange.Order, error) {
+// CancelOrder ...
+func (b *Buda) CancelOrder(id string) (*Order, error) {
 	url := fmt.Sprintf(ordersByID, id)
 	bodyRaw := &struct {
 		State string `json:"state"`

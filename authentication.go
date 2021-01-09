@@ -15,7 +15,7 @@ import (
 
 // {HTTP method} {path} {base64_encoded_body} {nonce}
 
-// DO NOT FUCKING TOUCH
+// This is a stable version. do not touch
 func (b *Buda) authenticate(req *http.Request) error {
 	valArray, err := createValArray(req)
 	if err != nil {

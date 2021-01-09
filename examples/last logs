@@ -1,0 +1,184 @@
+&{0xc00032b440}
+2020/10/30 08:01:48 TO() original_amount, reminded_amount 0.002 0.002
+2020/10/30 08:01:48 TO() calculater_amount, traded_amount 0 0
+2020/10/30 08:01:48 HALA CHELO !!!! &{ID:50886902 Type:Ask Status:pending CreatedAt:2020-10-30 08:01:40.184 +0000 UTC MarketID:BTC-CLP AccountID:185833 FeeCurrency:CLP PriceType:limit Limit:[10367062.82 CLP] Amount:[0.002 BTC] OriginalAmount:[0.002 BTC] TradedAmount:[0.0 BTC] TotalExchanged:[0.0 CLP] PaidFee:[0.0 CLP]}
+2020/10/30 08:01:48 STATUUUUUUUS!!!!!! pending
+before: validation if order value is nil
+HELLO &{50886902 active 0 0.002 1.036706282e+07 Ask   2020-10-30 08:01:40.184 +0000 UTC 0001-01-01 00:00:00 +0000 UTC}
+PPPPPPPPPPPPPPPPPP
+PPPPPPPPPPPPPPPPPP
+PPPPPPPPPPPPPPPPPP
+PPPPPPPPPPPPPPPPPP
+PPPPPPPPPPPPPPPPPP
+PPPPPPPPPPPPPPPPPP
+PPPPPPPPPPPPPPPPPP &{00000000-0000-0000-0000-000000000000     0 0 0    0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0 0 0 0 0 0 0 0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>}
+2020/10/30 08:01:48 Ask: 13198.31 Precio del dolar: $777 Porcentaje de renta: 0.01%
+Body received
+ {"order":{"id":50886911,"market_id":"BTC-CLP","account_id":185833,"type":"Ask","state":"received","created_at":"2020-10-30T08:01:48.350Z","fee_currency":"CLP","price_type":"limit","source":null,"limit":["10357637.73","CLP"],"amount":["0.002","BTC"],"original_amount":["0.002","BTC"],"traded_amount":["0.0","BTC"],"total_exchanged":["0.0","CLP"],"paid_fee":["0.0","CLP"]}}
+{0xc000307a20}
+2020/10/30 08:01:48 TO() original_amount, reminded_amount 0.002 0.002
+2020/10/30 08:01:48 TO() calculater_amount, traded_amount 0 0
+2020/10/30 08:01:48 HALA CHELO !!!! &{ID:50886911 Type:Ask Status:received CreatedAt:2020-10-30 08:01:48.35 +0000 UTC MarketID:BTC-CLP AccountID:185833 FeeCurrency:CLP PriceType:limit Limit:[10357637.73 CLP] Amount:[0.002 BTC] OriginalAmount:[0.002 BTC] TradedAmount:[0.0 BTC] TotalExchanged:[0.0 CLP] PaidFee:[0.0 CLP]}
+2020/10/30 08:01:48 STATUUUUUUUS!!!!!! received
+before: validation if order value is nil
+HELLO &{50886911 active 0 0.002 1.035763773e+07 Ask   2020-10-30 08:01:48.35 +0000 UTC 0001-01-01 00:00:00 +0000 UTC}
+PPPPPPPPPPPPPPPPPP
+PPPPPPPPPPPPPPPPPP
+PPPPPPPPPPPPPPPPPP
+PPPPPPPPPPPPPPPPPP
+PPPPPPPPPPPPPPPPPP
+PPPPPPPPPPPPPPPPPP
+PPPPPPPPPPPPPPPPPP &{00000000-0000-0000-0000-000000000000     0 0 0    0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0 0 0 0 0 0 0 0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>}
+2020/10/30 08:01:48 before s.processIfExecuted() (2)
+2020/10/30 08:01:48 #order Estado: 🟢 Cantidad: 0₿ Cantidad original: 0.002₿ Precio de cierre: $10357637.73 Tipo de orden:  / Ask Mercado:
+2020/10/30 08:01:48 after s.processIfExecuted() (2)
+2020/10/30 08:01:48 #order Estado: 🟢 Cantidad: 0₿ Cantidad original: 0.002₿ Precio de cierre: $10357637.73 Tipo de orden:  / Ask Mercado:
+2020/10/30 08:01:48 after full conditional (2)
+2020/10/30 08:01:48 after partial conditional (2)
+2020/10/30 08:01:48 waiting 3 seconds for next iteration...
+2020/10/30 08:01:51 loop iteration
+BEFORE
+INSIDEE 2
+Body received
+ {"order":{"id":50886911,"market_id":"BTC-CLP","account_id":185833,"type":"Ask","state":"pending","created_at":"2020-10-30T08:01:48.350Z","fee_currency":"CLP","price_type":"limit","source":null,"limit":["10357637.73","CLP"],"amount":["0.002","BTC"],"original_amount":["0.002","BTC"],"traded_amount":["0.0","BTC"],"total_exchanged":["0.0","CLP"],"paid_fee":["0.0","CLP"]}}
+2020/10/30 08:01:51 TO() original_amount, reminded_amount 0.002 0.002
+2020/10/30 08:01:51 TO() calculater_amount, traded_amount 0 0
+2020/10/30 08:01:51 HALA CHELO !!!! &{ID:50886911 Type:Ask Status:pending CreatedAt:2020-10-30 08:01:48.35 +0000 UTC MarketID:BTC-CLP AccountID:185833 FeeCurrency:CLP PriceType:limit Limit:[10357637.73 CLP] Amount:[0.002 BTC] OriginalAmount:[0.002 BTC] TradedAmount:[0.0 BTC] TotalExchanged:[0.0 CLP] PaidFee:[0.0 CLP]}
+2020/10/30 08:01:51 STATUUUUUUUS!!!!!! pending
+2020/10/30 08:01:51 before s.processIfExecuted() (1)
+2020/10/30 08:01:51 #order Estado: 🟢 Cantidad: 0₿ Cantidad original: 0.002₿ Precio de cierre: $10357637.73 Tipo de orden:  / Ask Mercado:
+2020/10/30 08:01:51 after s.processIfExecuted() (1)
+2020/10/30 08:01:51 #order Estado: 🟢 Cantidad: 0₿ Cantidad original: 0.002₿ Precio de cierre: $10357637.73 Tipo de orden:  / Ask Mercado:
+2020/10/30 08:01:51 after full conditional (1)
+2020/10/30 08:01:51 after partial conditional (1)
+2020/10/30 08:01:51 Waiting: current and last sell price are equal
+2020/10/30 08:01:54 loop iteration
+BEFORE
+INSIDEE 2
+Body received
+ {"order":{"id":50886911,"market_id":"BTC-CLP","account_id":185833,"type":"Ask","state":"pending","created_at":"2020-10-30T08:01:48.350Z","fee_currency":"CLP","price_type":"limit","source":null,"limit":["10357637.73","CLP"],"amount":["0.002","BTC"],"original_amount":["0.002","BTC"],"traded_amount":["0.0","BTC"],"total_exchanged":["0.0","CLP"],"paid_fee":["0.0","CLP"]}}
+2020/10/30 08:01:55 TO() original_amount, reminded_amount 0.002 0.002
+2020/10/30 08:01:55 TO() calculater_amount, traded_amount 0 0
+2020/10/30 08:01:55 HALA CHELO !!!! &{ID:50886911 Type:Ask Status:pending CreatedAt:2020-10-30 08:01:48.35 +0000 UTC MarketID:BTC-CLP AccountID:185833 FeeCurrency:CLP PriceType:limit Limit:[10357637.73 CLP] Amount:[0.002 BTC] OriginalAmount:[0.002 BTC] TradedAmount:[0.0 BTC] TotalExchanged:[0.0 CLP] PaidFee:[0.0 CLP]}
+2020/10/30 08:01:55 STATUUUUUUUS!!!!!! pending
+2020/10/30 08:01:55 before s.processIfExecuted() (1)
+2020/10/30 08:01:55 #order Estado: 🟢 Cantidad: 0₿ Cantidad original: 0.002₿ Precio de cierre: $10357637.73 Tipo de orden:  / Ask Mercado:
+2020/10/30 08:01:55 after s.processIfExecuted() (1)
+2020/10/30 08:01:55 #order Estado: 🟢 Cantidad: 0₿ Cantidad original: 0.002₿ Precio de cierre: $10357637.73 Tipo de orden:  / Ask Mercado:
+2020/10/30 08:01:55 after full conditional (1)
+2020/10/30 08:01:55 after partial conditional (1)
+2020/10/30 08:01:55 Waiting: current and last sell price are equal
+2020/10/30 08:01:58 loop iteration
+2020/10/30 08:01:58 Warning: before when try cancel order (111)
+before order &{50886911 active 0 0.002 1.035763773e+07 Ask   2020-10-30 08:01:48.35 +0000 UTC 0001-01-01 00:00:00 +0000 UTC}
+200
+Body received
+ {"order":{"id":50886911,"market_id":"BTC-CLP","account_id":185833,"type":"Ask","state":"pending","created_at":"2020-10-30T08:01:48.350Z","fee_currency":"CLP","price_type":"limit","source":null,"limit":["10357637.73","CLP"],"amount":["0.002","BTC"],"original_amount":["0.002","BTC"],"traded_amount":["0.0","BTC"],"total_exchanged":["0.0","CLP"],"paid_fee":["0.0","CLP"]}}
+&{0xc000456480}
+2020/10/30 08:01:58 TO() original_amount, reminded_amount 0.002 0.002
+2020/10/30 08:01:58 TO() calculater_amount, traded_amount 0 0
+2020/10/30 08:01:58 HALA CHELO !!!! &{ID:50886911 Type:Ask Status:pending CreatedAt:2020-10-30 08:01:48.35 +0000 UTC MarketID:BTC-CLP AccountID:185833 FeeCurrency:CLP PriceType:limit Limit:[10357637.73 CLP] Amount:[0.002 BTC] OriginalAmount:[0.002 BTC] TradedAmount:[0.0 BTC] TotalExchanged:[0.0 CLP] PaidFee:[0.0 CLP]}
+2020/10/30 08:01:58 STATUUUUUUUS!!!!!! pending
+before: validation if order value is nil
+HELLO &{50886911 active 0 0.002 1.035763773e+07 Ask   2020-10-30 08:01:48.35 +0000 UTC 0001-01-01 00:00:00 +0000 UTC}
+PPPPPPPPPPPPPPPPPP
+PPPPPPPPPPPPPPPPPP
+PPPPPPPPPPPPPPPPPP
+PPPPPPPPPPPPPPPPPP
+PPPPPPPPPPPPPPPPPP
+PPPPPPPPPPPPPPPPPP
+PPPPPPPPPPPPPPPPPP &{00000000-0000-0000-0000-000000000000     0 0 0    0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0 0 0 0 0 0 0 0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>}
+2020/10/30 08:01:58 Estrategia detenida 🔴
+2020/10/30 08:01:58 VEMES CHELE!!!!btc-clp
+Body received
+ {"ticker":{"market_id":"BTC-CLP","last_price":["10409485.0","CLP"],"min_ask":["10357637.73","CLP"],"max_bid":["10315011.0","CLP"],"volume":["33.81512152","BTC"],"price_variation_24h":"-0.004","price_variation_7d":"0.031"}}
+2020/10/30 08:01:58 Ask: 13190.18 Precio del dolar: $777 Porcentaje de renta: 0.01%
+2020/10/30 08:01:58 VEMES CHELE!!!!btc-clp
+Body received
+ {"ticker":{"market_id":"BTC-CLP","last_price":["10409485.0","CLP"],"min_ask":["10357637.73","CLP"],"max_bid":["10315011.0","CLP"],"volume":["33.81512152","BTC"],"price_variation_24h":"-0.004","price_variation_7d":"0.031"}}
+2020/10/30 08:01:59 Ask: 13190.18 Precio del dolar: $777 Porcentaje de renta: 0.01%
+2020/10/30 08:01:59 Felicidades, has completado la estrategia de manera correcta por una cantidad de 0.002₿ 😀
+2020/10/30 08:02:00 Vuelve a intentarlo cuando quieras. Recuerda que si escribes la palabra *hola*, puedes ver más opciones ℹ️
+2020/10/30 08:02:24 VEMES CHELE!!!!btc-clp
+2020/10/30 08:02:24 loop iteration
+BEFORE
+INSIDEE 1
+2020/10/30 08:02:24 Ask: 13199.55 Precio del dolar: $777 Porcentaje de renta: 0.005%
+2020/10/30 08:02:24 before secondary.CreateOrder() inside createOrGetPrevOrder() when s.internals.Order is nil
+2020/10/30 08:02:24 #order Estado:  Cantidad: 0.002₿ Cantidad original: 0₿ Precio de cierre: $10307330.60175 Tipo de orden: sell / limit Mercado: BTCCLP
+Body received
+ {"order":{"id":50886959,"market_id":"BTC-CLP","account_id":185833,"type":"Ask","state":"received","created_at":"2020-10-30T08:02:24.671Z","fee_currency":"CLP","price_type":"limit","source":null,"limit":["10307330.6","CLP"],"amount":["0.002","BTC"],"original_amount":["0.002","BTC"],"traded_amount":["0.0","BTC"],"total_exchanged":["0.0","CLP"],"paid_fee":["0.0","CLP"]}}
+{0xc000307a20}
+2020/10/30 08:02:24 TO() original_amount, reminded_amount 0.002 0.002
+2020/10/30 08:02:24 TO() calculater_amount, traded_amount 0 0
+2020/10/30 08:02:24 HALA CHELO !!!! &{ID:50886959 Type:Ask Status:received CreatedAt:2020-10-30 08:02:24.671 +0000 UTC MarketID:BTC-CLP AccountID:185833 FeeCurrency:CLP PriceType:limit Limit:[10307330.6 CLP] Amount:[0.002 BTC] OriginalAmount:[0.002 BTC] TradedAmount:[0.0 BTC] TotalExchanged:[0.0 CLP] PaidFee:[0.0 CLP]}
+2020/10/30 08:02:24 STATUUUUUUUS!!!!!! received
+before: validation if order value is nil
+HELLO &{50886959 active 0 0.002 1.03073306e+07 Ask   2020-10-30 08:02:24.671 +0000 UTC 0001-01-01 00:00:00 +0000 UTC}
+PPPPPPPPPPPPPPPPPP
+PPPPPPPPPPPPPPPPPP
+PPPPPPPPPPPPPPPPPP
+PPPPPPPPPPPPPPPPPP
+PPPPPPPPPPPPPPPPPP
+PPPPPPPPPPPPPPPPPP
+PPPPPPPPPPPPPPPPPP &{00000000-0000-0000-0000-000000000000     0 0 0    0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0 0 0 0 0 0 0 0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>}
+2020/10/30 08:02:24 after secondary.CreateOrder() inside createOrGetPrevOrder() when s.internals.Order is nil
+2020/10/30 08:02:24 #order Estado: 🟢 Cantidad: 0₿ Cantidad original: 0.002₿ Precio de cierre: $10307330.6 Tipo de orden:  / Ask Mercado:
+2020/10/30 08:02:24 before s.processIfExecuted() (1)
+2020/10/30 08:02:24 #order Estado: 🟢 Cantidad: 0₿ Cantidad original: 0.002₿ Precio de cierre: $10307330.6 Tipo de orden:  / Ask Mercado:
+2020/10/30 08:02:24 after s.processIfExecuted() (1)
+2020/10/30 08:02:24 #order Estado: 🟢 Cantidad: 0₿ Cantidad original: 0.002₿ Precio de cierre: $10307330.6 Tipo de orden:  / Ask Mercado:
+2020/10/30 08:02:24 after full conditional (1)
+2020/10/30 08:02:24 after partial conditional (1)
+2020/10/30 08:02:24 Waiting: current and last sell price are equal
+Body received
+ {"ticker":{"market_id":"BTC-CLP","last_price":["10409485.0","CLP"],"min_ask":["10409485.0","CLP"],"max_bid":["10315011.0","CLP"],"volume":["33.81512152","BTC"],"price_variation_24h":"-0.004","price_variation_7d":"0.031"}}
+2020/10/30 08:02:24 Ask: 13197.76 Precio del dolar: $777 Porcentaje de renta: 0.005%
+2020/10/30 08:02:27 loop iteration
+BEFORE
+INSIDEE 2
+Body received
+ {"order":{"id":50886959,"market_id":"BTC-CLP","account_id":185833,"type":"Ask","state":"traded","created_at":"2020-10-30T08:02:24.671Z","fee_currency":"CLP","price_type":"limit","source":null,"limit":["10307330.6","CLP"],"amount":["0.0","BTC"],"original_amount":["0.002","BTC"],"traded_amount":["0.002","BTC"],"total_exchanged":["20630.02","CLP"],"paid_fee":["165.04","CLP"]}}
+2020/10/30 08:02:28 TO() original_amount, reminded_amount 0.002 0
+2020/10/30 08:02:28 TO() calculater_amount, traded_amount 0.002 0.002
+2020/10/30 08:02:28 HALA CHELO !!!! &{ID:50886959 Type:Ask Status:traded CreatedAt:2020-10-30 08:02:24.671 +0000 UTC MarketID:BTC-CLP AccountID:185833 FeeCurrency:CLP PriceType:limit Limit:[10307330.6 CLP] Amount:[0.0 BTC] OriginalAmount:[0.002 BTC] TradedAmount:[0.002 BTC] TotalExchanged:[20630.02 CLP] PaidFee:[165.04 CLP]}
+2020/10/30 08:02:28 STATUUUUUUUS!!!!!! traded
+2020/10/30 08:02:28 before s.processIfExecuted() (1)
+2020/10/30 08:02:28 #order Estado: 💰 Cantidad: 0.002₿ Cantidad original: 0.002₿ Precio de cierre: $10307330.6 Tipo de orden:  / Ask Mercado:
+44444
+44444 &{50886959 executed 0.002 0.002 1.03073306e+07 Ask   2020-10-30 08:02:24.671 +0000 UTC 0001-01-01 00:00:00 +0000 UTC}
+BEFORE CLOSE SHORT / diff 0.002 0.001
+si el ultimo tramo es menor al minimo requerido no podra ser pagado
+IF
+2020/10/30 08:02:28 Pair BTCUSDT
+2020/10/30 08:02:28 Side BUY
+2020/10/30 08:02:28 Position side BOTH
+2020/10/30 08:02:28 Type LIMIT
+2020/10/30 08:02:28 Amount 0.002
+2020/10/30 08:02:28 Price 13275.71
+2020/10/30 08:02:28 AAAA111
+2020/10/30 08:02:28 Error in strategy.processIfExecuted() err=<APIError> code=-2014, msg=API-key format invalid.
+2020/10/30 08:02:29 VEMES CHELE!!!!btc-clp
+Body received
+ {"ticker":{"market_id":"BTC-CLP","last_price":["10315011.0","CLP"],"min_ask":["10409485.0","CLP"],"max_bid":["10315011.0","CLP"],"volume":["33.81712152","BTC"],"price_variation_24h":"-0.013","price_variation_7d":"0.021"}}
+2020/10/30 08:02:29 Ask: 13196.53 Precio del dolar: $777 Porcentaje de renta: 0.005%
+2020/10/30 08:02:29 Warning: before when try cancel order (222)
+before order &{50886959 executed 0.002 0.002 1.03073306e+07 Ask   2020-10-30 08:02:24.671 +0000 UTC 0001-01-01 00:00:00 +0000 UTC}
+200
+Body received
+ {"order":{"id":50886959,"market_id":"BTC-CLP","account_id":185833,"type":"Ask","state":"traded","created_at":"2020-10-30T08:02:24.671Z","fee_currency":"CLP","price_type":"limit","source":null,"limit":["10307330.6","CLP"],"amount":["0.0","BTC"],"original_amount":["0.002","BTC"],"traded_amount":["0.002","BTC"],"total_exchanged":["20630.02","CLP"],"paid_fee":["165.04","CLP"]}}
+&{0xc000242000}
+2020/10/30 08:02:29 TO() original_amount, reminded_amount 0.002 0
+2020/10/30 08:02:29 TO() calculater_amount, traded_amount 0.002 0.002
+2020/10/30 08:02:29 HALA CHELO !!!! &{ID:50886959 Type:Ask Status:traded CreatedAt:2020-10-30 08:02:24.671 +0000 UTC MarketID:BTC-CLP AccountID:185833 FeeCurrency:CLP PriceType:limit Limit:[10307330.6 CLP] Amount:[0.0 BTC] OriginalAmount:[0.002 BTC] TradedAmount:[0.002 BTC] TotalExchanged:[20630.02 CLP] PaidFee:[165.04 CLP]}
+2020/10/30 08:02:29 STATUUUUUUUS!!!!!! traded
+before: validation if order value is nil
+HELLO &{50886959 executed 0.002 0.002 1.03073306e+07 Ask   2020-10-30 08:02:24.671 +0000 UTC 0001-01-01 00:00:00 +0000 UTC}
+PPPPPPPPPPPPPPPPPP
+PPPPPPPPPPPPPPPPPP
+PPPPPPPPPPPPPPPPPP
+PPPPPPPPPPPPPPPPPP
+PPPPPPPPPPPPPPPPPP
+PPPPPPPPPPPPPPPPPP
+PPPPPPPPPPPPPPPPPP &{00000000-0000-0000-0000-000000000000     0 0 0    0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0 0 0 0 0 0 0 0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC <nil>}
+
