@@ -4,13 +4,12 @@ import (
 	"fmt"
 	"net/http"
 	"strconv"
-	"time"
 
 	"github.com/pkg/errors"
 )
 
 type Transaction struct {
-	Timestamp time.Time
+	Timestamp string
 	Amount    float64
 	Price     float64
 	OrderType string
@@ -47,21 +46,23 @@ func (b *Buda) GetTrades(pair string) (*Trades, error) {
 
 	entries := make([]*Transaction, 0)
 	for _, entry := range payload.Trades.Entries {
-		price, err := strconv.ParseFloat(string(entry[0]), bitsLen64)
+		entryPrice := fmt.Sprintf("%v", entry[0])
+		price, err := strconv.ParseFloat(entryPrice, bitsLen64)
 		if err != nil {
-			return nil, errors.Wrap("buda: b.GetTrades strconv.ParseFloat price error")
+			return nil, errors.Wrap(err, "buda: b.GetTrades strconv.ParseFloat price error")
 		}
 
-		amount, err := strconv.ParseFloat(string(entry[1]), bitsLen64)
+		entryAount := fmt.Sprintf("%v", entry[1])
+		amount, err := strconv.ParseFloat(entryAount, bitsLen64)
 		if err != nil {
-			return nil, errors.Wrap("buda: b.GetTrades strconv.ParseFloat amount error")
+			return nil, errors.Wrap(err, "buda: b.GetTrades strconv.ParseFloat amount error")
 		}
 
 		entries = append(entries, &Transaction{
 			Timestamp: payload.Trades.LastTimestamp,
 			Price:     price,
 			Amount:    amount,
-			OrderType: string(entry[3]),
+			OrderType: fmt.Sprintf("%v", entry[3]),
 		})
 	}
 
