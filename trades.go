@@ -18,7 +18,7 @@ type Transaction struct {
 
 // Trades is the response of the buda api for market traids according to a specific pair
 type Trades struct {
-	LastTimestamp time.Time
+	LastTimestamp string
 	MarketID      string
 	Entries       []*Transaction
 }
@@ -45,23 +45,28 @@ func (b *Buda) GetTrades(pair string) (*Trades, error) {
 		return nil, errors.Wrap(err, "buda: b.GetTrades b.scanBody error")
 	}
 
-	lastTimestamp, err := strconv.ParseInt(payload.Trades.LastTimestamp, 10, 64)
-	if err != nil {
-		return nil, errors.Wrap(err, "buda: b.GetTrades ParseInt last_timestamp error")
-	}
-
-	entries := [][]string{}
+	entries := make([]*Transaction, 0)
 	for _, entry := range payload.Trades.Entries {
-		entries = append(entries, []string{
-			fmt.Sprintf("%v", entry[0]),
-			fmt.Sprintf("%v", entry[1]),
-			fmt.Sprintf("%v", entry[2]),
-			fmt.Sprintf("%v", entry[3]),
+		price, err := strconv.ParseFloat(string(entry[0]), bitsLen64)
+		if err != nil {
+			return nil, errors.Wrap("buda: b.GetTrades strconv.ParseFloat price error")
+		}
+
+		amount, err := strconv.ParseFloat(string(entry[1]), bitsLen64)
+		if err != nil {
+			return nil, errors.Wrap("buda: b.GetTrades strconv.ParseFloat amount error")
+		}
+
+		entries = append(entries, &Transaction{
+			Timestamp: payload.Trades.LastTimestamp,
+			Price:     price,
+			Amount:    amount,
+			OrderType: string(entry[3]),
 		})
 	}
 
 	trades := &Trades{
-		LastTimestamp: time.Unix(lastTimestamp, 0),
+		LastTimestamp: payload.Trades.LastTimestamp,
 		MarketID:      payload.Trades.MarketID,
 		Entries:       entries,
 	}
