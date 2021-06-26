@@ -20,7 +20,6 @@ type Buda struct {
 	key        string
 	secret     string
 	baseURL    string
-	basePair   string
 	shouldStop bool
 
 	exchange.Exchange
