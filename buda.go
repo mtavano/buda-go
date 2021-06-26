@@ -2,8 +2,6 @@ package buda
 
 import (
 	"net/http"
-
-	"github.com/blue-factory/cryptobot/pkg/exchange"
 )
 
 const (
@@ -21,8 +19,6 @@ type Buda struct {
 	secret     string
 	baseURL    string
 	shouldStop bool
-
-	exchange.Exchange
 
 	// http values
 	client HTTPClient
