@@ -4,11 +4,6 @@ import (
 	"net/http"
 )
 
-const (
-	name    = "buda.com"
-	baseURL = "https://www.buda.com/api/v2"
-)
-
 type HTTPClient interface {
 	Do(*http.Request) (*http.Response, error)
 }
@@ -25,7 +20,7 @@ type Buda struct {
 }
 
 // New ...
-func New(key, secret string, client HTTPClient) *Buda {
+func New(baseURL, key, secret string, client HTTPClient) *Buda {
 	return &Buda{
 		key:     key,
 		secret:  secret,
