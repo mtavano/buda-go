@@ -68,7 +68,6 @@ func (b *Buda) CreateOrder(pair string, po *CreateOrderRequest) (*Order, error) 
 		Order *Order `json:"order"`
 	}{}
 	err = b.scanBody(res, payload)
-	fmt.Println(res.Body)
 	if err != nil {
 		return nil, err
 	}
@@ -110,7 +109,6 @@ func (b *Buda) CancelOrder(id string) (*Order, error) {
 	if err != nil {
 		return nil, errors.Wrap(err, "buda: b.CancelOrder b.makeRequest error")
 	}
-	fmt.Println(res.StatusCode)
 
 	payload := &struct {
 		Order *Order `json:"order"`
@@ -119,7 +117,6 @@ func (b *Buda) CancelOrder(id string) (*Order, error) {
 	if err != nil {
 		return nil, errors.Wrap(err, "buda: b.CancelOrder b.scanBody error")
 	}
-	fmt.Println(payload)
 
 	return payload.Order, nil
 }
