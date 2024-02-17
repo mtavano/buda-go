@@ -9,9 +9,10 @@ const (
 	PairETHCLP = "eth-clp"
 
 	// endpoints
-	marketTrades           = "/markets/%s/trades"
-	marketTickerEndpoint   = "/markets/%s/ticker"
-	accountBalanceEndpoint = "/balances"
-	ordersByMarektEndpoint = "/markets/%s/orders"
-	ordersByID             = "/orders/%s"
+	marketOrderBookEndpoint = "/markets/%s/order_book"
+	marketTradesEndpoint    = "/markets/%s/trades"
+	marketTickerEndpoint    = "/markets/%s/ticker"
+	accountBalanceEndpoint  = "/balances"
+	ordersByMarektEndpoint  = "/markets/%s/orders"
+	ordersByIDEndpoint      = "/orders/%s"
 )

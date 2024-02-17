@@ -30,7 +30,7 @@ type tradeResponse struct {
 
 // GetTrades ...
 func (b *Buda) GetTrades(pair string) (*Trades, error) {
-	url := fmt.Sprintf(marketTrades, pair)
+	url := fmt.Sprintf(marketTradesEndpoint, pair)
 	res, err := b.makeRequest(http.MethodGet, url, nil, false)
 	if err != nil {
 		return nil, errors.Wrap(err, "buda: b.GetTrades b.makeRequest error")
