@@ -16,6 +16,7 @@ type MarketHistory struct {
 }
 
 func (b *Buda) GetMarketHistory(symbol string, from, to time.Time) (*MarketHistory, error) {
+	fmt.Println("here 1")
 	res, err := b.makeRequest(
 		http.MethodGet,
 		fmt.Sprintf(marketHistoryEndpoint, symbol, from.Unix(), to.Unix()),
@@ -23,8 +24,11 @@ func (b *Buda) GetMarketHistory(symbol string, from, to time.Time) (*MarketHisto
 		true,
 	)
 	if err != nil {
+		fmt.Println("here 1 err", err.Error())
 		return nil, err
 	}
+	fmt.Println("here 1 status", res.StatusCode)
+	fmt.Printf("here 1 res %+v\n", res)
 
 	var payload MarketHistory
 	err = b.scanBody(res, &payload)

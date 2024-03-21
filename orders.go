@@ -62,8 +62,8 @@ type OrderLimit struct {
 }
 
 // CreateOrder ...
-func (b *Buda) CreateOrder(pair string, po *CreateOrderRequest) (*Order, error) {
-	body, err := b.MarshallBody(po)
+func (b *Buda) CreateOrder(pair string, req *CreateOrderRequest) (*Order, error) {
+	body, err := b.MarshallBody(req)
 	if err != nil {
 		return nil, err
 	}
