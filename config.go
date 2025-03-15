@@ -15,5 +15,5 @@ const (
 	accountBalanceEndpoint  = "/balances"
 	ordersByMarektEndpoint  = "/markets/%s/orders"
 	ordersByIDEndpoint      = "/orders/%s"
-	marketHistoryEndpoint   = "/tv/history?symbol=%s&resolution=1D&from=%d&to=%d"
+	marketHistoryEndpoint   = "/tv/history?symbol=%s&resolution=1D&from=%d&to=%d&countback=2"
 )
