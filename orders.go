@@ -53,7 +53,13 @@ type CreateOrderRequest struct {
 	Type      string      `json:"type,omitempty"`
 	PriceType string      `json:"price_type,omitempty"` // limit
 	Limit     *OrderLimit `json:"limit"`
+	Stop      *OrderStop  `json:"stop"`
 	Amount    float64     `json:"amount,omitempty"`
+}
+
+type OrderStop struct {
+	PriceStop float64 `json:"price_stop"`
+	Type      string  `json:"type"`
 }
 
 type OrderLimit struct {
