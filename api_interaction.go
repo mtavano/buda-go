@@ -33,10 +33,6 @@ func (b *Buda) makeRequest(method, path string, body io.Reader, private bool) (*
 		return nil, errors.Wrap(err, "buda: httpClient.Do error")
 	}
 
-	fmt.Println("client.Do error", err)
-	fmt.Println("client.Do response status", response.Status)
-	readAndPreserveBody(response)
-
 	return response, nil
 }
 

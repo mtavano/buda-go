@@ -1,6 +1,7 @@
 package buda
 
 import (
+	"encoding/json"
 	"fmt"
 	"net/http"
 	"time"
@@ -74,6 +75,8 @@ func (b *Buda) CreateOrder(pair string, req *CreateOrderRequest) (*Order, error)
 		return nil, err
 	}
 
+	bb, _ := json.MarshalIndent(req, "", "")
+	fmt.Printf("CREATE ORDER REQUEST: %+v\n", string(bb))
 	url := fmt.Sprintf(ordersByMarektEndpoint, pair)
 	res, err := b.makeRequest(http.MethodPost, url, body, true)
 	if err != nil {
