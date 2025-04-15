@@ -31,6 +31,10 @@ func (b *Buda) makeRequest(method, path string, body io.Reader, private bool) (*
 		return nil, errors.Wrap(err, "buda: httpClient.Do error")
 	}
 
+	fmt.Println("client.Do error", err)
+	fmt.Println("client.Do response status", response.Status)
+	readAndPreserveBody(response)
+
 	return response, nil
 }
 
@@ -56,4 +60,22 @@ func (b *Buda) MarshallBody(v interface{}) (io.Reader, error) {
 	}
 
 	return bytes.NewBuffer(slice), nil
+}
+
+func readAndPreserveBody(resp *http.Response) ([]byte, error) {
+	// Lee el contenido del body
+	bodyBytes, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return nil, err
+	}
+
+	fmt.Println("response -->", string(bodyBytes))
+
+	// Importante: cerramos el body original
+	resp.Body.Close()
+
+	// Restauramos el body para que pueda volver a ser leído
+	resp.Body = io.NopCloser(bytes.NewBuffer(bodyBytes))
+
+	return bodyBytes, nil
 }
