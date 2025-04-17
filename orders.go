@@ -59,8 +59,8 @@ type CreateOrderRequest struct {
 }
 
 type OrderStop struct {
-	StopPrice float64 `json:"stop_price"`
-	Type      string  `json:"type"`
+	StopPrice int64  `json:"stop_price"`
+	Type      string `json:"type"`
 }
 
 type OrderLimit struct {
