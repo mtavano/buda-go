@@ -42,6 +42,7 @@ type Order struct {
 	TradedAmount   []string  `json:"traded_amount,omitempty"`
 	TotalExchanged []string  `json:"total_exchanged,omitempty"`
 	PaidFee        []string  `json:"paid_fee,omitempty"`
+	StopPrice      []string  `json:"stop_price"`
 }
 
 type OrdersBook struct {
