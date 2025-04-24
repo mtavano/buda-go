@@ -30,6 +30,7 @@ const (
 type Order struct {
 	ID             uint64    `json:"id,omitempty"`
 	Type           string    `json:"type,omitempty"`
+	OrderType      string    `json:"order_type"`
 	Status         string    `json:"state,omitempty"`
 	CreatedAt      time.Time `json:"created_at,omitempty"`
 	MarketID       string    `json:"market_id,omitempty"`
