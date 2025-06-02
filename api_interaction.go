@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"io"
 	"io/ioutil"
-	"log"
 	"net/http"
 
 	"github.com/pkg/errors"
@@ -14,7 +13,6 @@ import (
 
 func (b *Buda) makeRequest(method, path string, body io.Reader, private bool) (*http.Response, error) {
 	url := fmt.Sprintf("%s%s", b.baseURL, path)
-	log.Println("[MAKE REQUEST] url:", url)
 	req, err := http.NewRequest(method, url, body)
 	if err != nil {
 		return nil, errors.Wrap(err, "buda: Buda.makeRequest http.NewRequest error")
