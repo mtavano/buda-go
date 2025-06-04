@@ -20,10 +20,10 @@ func (b *Buda) GetMarketHistory(symbol string, from, to time.Time) (*MarketHisto
 		http.MethodGet,
 		fmt.Sprintf(marketHistoryEndpoint, symbol, from.Unix(), to.Unix()),
 		nil,
-		true,
+		false,
 	)
 	if err != nil {
-		fmt.Println("here 1 err", err.Error())
+		fmt.Println("error making request to market history endpoint:", err.Error())
 		return nil, err
 	}
 
